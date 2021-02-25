@@ -12,9 +12,7 @@ $(document).ready(function() {
 
   $("form").on("submit", function(event) {
     event.preventDefault();
-    $('#blank-error').addClass('error-msg');
-    $('#too-wordy').addClass('error-msg');
-
+    
     let url = 'http://localhost:8080/tweets';
     
     const text = $("#tweet-text").val();
@@ -23,14 +21,13 @@ $(document).ready(function() {
     //if text are is empty provide error msg
     if (!text) {
       // console.log("error: ", new Error('No tweet provided'));
-      // window.alert('No tweet provided');
-      $('#blank-error').toggleClass('error-msg')
-      // $('.error-msg').slideDown('slow');
+      // window.alert('Cat got your tongue?');
+      return errorMessage('Cat got your tongue?')
       //if tweet is too long provide error msg
     } else if (text.length > 140) {
       // console.log("error: ", new Error('Your tweet is too long'));
-      // window.alert('Your tweet is too long');
-      $('#too-wordy').toggleClass('error-msg')
+      // window.alert('Too much to say! Shorten it up!');
+      return errorMessage('Too much to say! Shorten it up!')
     } else {
       $.ajax({
         url: url,
@@ -47,6 +44,15 @@ $(document).ready(function() {
     
   });
 });
+
+const errorMessage = function(message) {
+  $(".error-msg").text(message);
+  $(".error-msg").slideDown(function () {
+    setTimeout(function () {
+      $(".error-msg").slideUp()
+    }, 3000)
+  })
+}
 
 const loadTweets = function() {
   $.ajax({
