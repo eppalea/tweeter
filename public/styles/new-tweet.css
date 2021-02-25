@@ -1,0 +1,57 @@
+
+
+
+.new-tweet {
+  width: 100%;
+}
+
+.error-msg {
+  display: none;
+}
+
+#blank-error {
+    background-color: #FFCCBA;
+    border: 2px solid red;  
+    margin: 5%;
+}
+
+#too-wordy {
+  background-color: #FFCCBA;
+  border: 2px solid red;  
+  margin: 5%;
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.textbox {
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: #f4f1ec;
+  width: 100%;
+  resize: none;
+}
+
+.overcount {
+  color: red;
+}
+
+
+label {
+  font-weight: 500;
+}
+
+button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: 'Bungee Inline';
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px
+}

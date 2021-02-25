@@ -1,0 +1,72 @@
+.history {
+  width: 100%;
+  border-style: solid;
+  margin-top: 5%;
+}
+
+
+.old-tweet {
+  border: 2px solid black;
+  margin: 5%;
+  
+}
+
+.old-tweet:hover {
+  box-shadow: 10px 10px grey;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between; 
+  
+}
+
+.left {
+  display: flex;
+}
+
+.user-thumbnail {
+  display: flex;
+  width: 4rem;
+  margin: 0.6em;
+  
+}
+
+.username {
+  display: flex;
+  
+
+}
+
+.user-handle {
+  display: flex;
+  
+  margin: 20px;
+  visibility: hidden;
+}
+
+.old-tweet:hover .user-handle {
+  visibility: visible;
+}
+
+
+.tweet-text {
+  display: flex;
+  margin: 20px;
+  border-bottom: 2px solid black;
+  padding-bottom: 40px;
+  /* border: 1px solid red; */
+}
+
+.label {
+  margin: 2%;
+  /* border: none;
+  border-bottom: 2px solid black; */
+}
+
+.tweet-footer {
+  font-size: 12px;
+  margin: 3%;
+  display: flex;
+  justify-content: space-between;
+}
