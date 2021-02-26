@@ -11,7 +11,6 @@
   "author": "Lighthouse Labs",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
     "body-parser": "^1.19.0",
     "chance": "^1.1.7",
     "express": "^4.17.1",
@@ -19,14 +18,5 @@
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
-=======
-    "body-parser": "^1.15.2",
-    "chance": "^1.0.2",
-    "express": "^4.13.4",
-    "md5": "^2.1.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.9.2"
->>>>>>> 6b59064f8aab77684c044e0630b732d705678204
   }
 }
