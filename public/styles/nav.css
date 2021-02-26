@@ -6,9 +6,12 @@ nav {
  padding: 1.5em;
  display: flex;
  justify-content: space-between;
-
  position: fixed;
  top: 0;
-
 }
 
+#write-new-tweet {
+  font-family: Source Sans Pro;
+  background-color: transparent;
+  border: none;
+}
