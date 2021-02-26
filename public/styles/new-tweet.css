@@ -1,24 +1,16 @@
-
-
-
 .new-tweet {
   width: 100%;
 }
 
+.compose {
+  font-size: 25px;
+}
+
 .error-msg {
   display: none;
-}
-
-#blank-error {
-    background-color: #FFCCBA;
-    border: 2px solid red;  
-    margin: 5%;
-}
-
-#too-wordy {
-  background-color: #FFCCBA;
-  border: 2px solid red;  
-  margin: 5%;
+  border: 2px solid red;
+  text-align: center;  
+  box-sizing: border-box;
 }
 
 input {
@@ -38,7 +30,6 @@ input {
 .overcount {
   color: red;
 }
-
 
 label {
   font-weight: 500;
