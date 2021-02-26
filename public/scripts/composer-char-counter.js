@@ -18,9 +18,7 @@ const onKeyUp = function() {
     charCounter.addClass("overcount");
   } else {
     charCounter.removeClass("overcount");
-    
   }
-  
 };
 
 
