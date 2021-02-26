@@ -29,10 +29,10 @@ body {
   align-items: center
 }
 
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
  main {
   display: flex;
   flex: 1;
@@ -45,10 +45,10 @@ body {
   padding: 2em;
 }
 
-
 /* Mobile Styles*/
 @media only screen and (max-width: 767px) {
   nav {
+    height: 170px;
     background-color: #d98900;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   }
@@ -56,12 +56,7 @@ body {
   .nav-header {
     width: 100%;
   }
-
-  .container {
-    border: 50px;
-  }
 }
-
 
 /*Tablet Styles*/
 @media only screen and (min-width: 768px){
