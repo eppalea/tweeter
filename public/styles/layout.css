@@ -46,7 +46,6 @@ body {
 }
 
 
-
 /* Mobile Styles*/
 @media only screen and (max-width: 767px) {
   nav {
@@ -54,14 +53,9 @@ body {
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   }
 
-
   .nav-header {
     width: 100%;
   }
-
-  .write-new-tweet {
-    background-color: #d98900;
-  } 
 
   .container {
     border: 50px;
