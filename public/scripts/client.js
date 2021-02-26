@@ -43,6 +43,10 @@ $(document).ready(function() {
     }
     
   });
+
+  $('#write-new-tweet').on("click", function() {
+    $('#tweet-text').focus();
+  })
 });
 
 const errorMessage = function(message) {
@@ -69,6 +73,7 @@ const loadTweets = function() {
 
 const renderTweets = function(tweets) {
   $('textarea').val('');
+  $('.counter').text('140');
   // $('#tweet-text').empty();
   // loops through tweets
   for (let tweet of tweets) {
@@ -114,5 +119,6 @@ const createTweetElement = function(tweetData) {
   // console.log("the $tweet is:", $tweet);
   return $tweet;
 };
+
 
 
