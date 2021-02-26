@@ -20,21 +20,29 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 120px;
 }
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  main {
   display: flex;
-  width: 90%;
+  flex: 1;
   align-items: center;
   background-color: #f4f1ec;
   flex-direction: column;
+}
+
+.container {
+  padding: 2em;
 }
 
 
@@ -46,16 +54,24 @@ body {
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   }
 
-  body {
-    display: flex;
-    flex-direction: column;
+
+  .nav-header {
+    width: 100%;
+  }
+
+  .write-new-tweet {
+    background-color: #d98900;
+  } 
+
+  .container {
+    border: 50px;
   }
 }
 
 
 /*Tablet Styles*/
 @media only screen and (min-width: 768px){
-  body {
+  .content-container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -64,10 +80,4 @@ body {
   .nav-header {
     margin: 50px;
   }
-}
-
-
-/*Desktop Styles*/
-@media only screen and (min-width: 1024px) {
-
 }
