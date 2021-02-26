@@ -22,3 +22,9 @@ This repository is the starter code for the project: Students will fork and clon
 ## Dev Dependencies
 
 - Nodemon
+
+## Screenshots
+
+!["Screeshot of Desktop Layout"](https://github.com/eppalea/tweeter/blob/master/docs/Tweeter%20-%20Desktop%20Layout.png?raw=true)
+!["Screeshot of Tablet Layout"](https://github.com/eppalea/tweeter/blob/master/docs/Tweeter%20-%20Tablet%20Layout.png?raw=true)
+!["Screeshot of Mobile Layout"](https://github.com/eppalea/tweeter/blob/master/docs/Tweeter%20-%20Mobile%20Layout.png?raw=true)
