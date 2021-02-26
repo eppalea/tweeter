@@ -40,39 +40,33 @@
       </div>
     </nav>
     <div class=content-container>
-    <header class="nav-header">
-      <div>
+      <header class="nav-header">
+        <div>
           <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div class="name">
-        <h2><span>Eppa Lea</span> Turniawan</h2>
-      </div>
-
-      <!-- <div>
-          <span class="name"><strong>Eppa Lea </strong> Turniawan</span>
-      </div> -->
-  </header>
-
+        </div>
+        <br>
+        <div class="name">
+          <h2><span>Eppa Lea</span> Turniawan</h2>
+        </div>
+      </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2><span class="compose">Compose Tweet</span></h2>
-        <form action="/tweets" method="POST">
-          <div class="error-msg"></div>
-          <div class="input">
-            <textarea class="textbox" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          </div>
-          <div class="button">
-            <button id="button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section class="history">
-      </section>
-    </main>
+      <main class="container">
+        <section class="new-tweet">
+          <h2><span class="compose">Compose Tweet</span></h2>
+          <form action="/tweets" method="POST">
+            <div class="error-msg"></div>
+            <div class="input">
+              <textarea class="textbox" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            </div>
+            <div class="button">
+              <button id="button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section class="history"></section>
+      </main>
     </div>
   </body>
 </html>
