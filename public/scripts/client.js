@@ -26,7 +26,7 @@ $(document).ready(function() {
 
     //If tweet is too long//
     if (text.length > 140) {
-        return errorMessage('Too much to say! Shorten it up!')
+      return errorMessage('Too much to say! Shorten it up!');
     }
 
     //If tweet criteria passes, post tweet//
@@ -37,10 +37,10 @@ $(document).ready(function() {
     }).then((result) => {
       console.log('result is', result);
       return loadTweets();
-      }).catch(err => {
+    }).catch(err => {
       console.log('ajax error caught');
       console.log(err);
-      });
+    });
     
   });
 
@@ -54,11 +54,11 @@ $(document).ready(function() {
 //Function to show error message and for how long//
 const errorMessage = function(message) {
   $(".error-msg").text(message);
-  $(".error-msg").slideDown(function () {
-    setTimeout(function () {
-      $(".error-msg").slideUp()
-    }, 3000)
-  })
+  $(".error-msg").slideDown(function() {
+    setTimeout(function() {
+      $(".error-msg").slideUp();
+    }, 3000);
+  });
 };
 
 
@@ -92,7 +92,7 @@ const createTweetElement = function(tweetData) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   let $tweet = $(`
   <article class="old-tweet">
