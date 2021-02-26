@@ -40,7 +40,6 @@
 
 .user-handle {
   display: flex;
-  
   margin: 20px;
   visibility: hidden;
 }
@@ -69,4 +68,12 @@
   margin: 3%;
   display: flex;
   justify-content: space-between;
+}
+
+.icons {
+  visibility: hidden;
+}
+
+.old-tweet:hover .icons {
+  visibility: visible;
 }
