@@ -20,14 +20,10 @@ $(document).ready(function() {
 
     //if text are is empty provide error msg
     if (!text) {
-      // console.log("error: ", new Error('No tweet provided'));
-      // window.alert('Cat got your tongue?');
       return errorMessage('Cat got your tongue?')
       //if tweet is too long provide error msg
     } else if (text.length > 140) {
-      // console.log("error: ", new Error('Your tweet is too long'));
-      // window.alert('Too much to say! Shorten it up!');
-      return errorMessage('Too much to say! Shorten it up!')
+        return errorMessage('Too much to say! Shorten it up!')
     } else {
       $.ajax({
         url: url,
@@ -44,9 +40,11 @@ $(document).ready(function() {
     
   });
 
+  //Directs cursor from nav bar to textarea
   $('#write-new-tweet').on("click", function() {
     $('#tweet-text').focus();
-  })
+  });
+
 });
 
 const errorMessage = function(message) {
@@ -74,7 +72,6 @@ const loadTweets = function() {
 const renderTweets = function(tweets) {
   $('textarea').val('');
   $('.counter').text('140');
-  // $('#tweet-text').empty();
   // loops through tweets
   for (let tweet of tweets) {
     // calls createTweetElement for each tweet
