@@ -32,8 +32,8 @@
     <nav>
       <span style="font-family: 'Bungee Inline', sans-serif">tweeter</span>
       <div>
-        <span><strong>Write</strong> a new tweet</span>
-        <span style="font-size: 3em; color: Tomato;">
+        <button id="write-new-tweet"><span><strong>Write</strong> a new tweet</span></button>
+        <span style="color: Tomato;">
           <i class="fas fa-angle-double-down"></i>
         </span>
       </div>
@@ -56,7 +56,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h2><span class="compose">Compose Tweet</span></h2>
         <form action="/tweets" method="POST">
           <div class="error-msg"></div>
           <div class="input">
