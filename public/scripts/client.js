@@ -10,43 +10,48 @@ document.addEventListener("dblclick", (event) => {
 $(document).ready(function() {
   loadTweets();
 
+  //Function determines tweet validity and posts if criteria are met//
   $("form").on("submit", function(event) {
     event.preventDefault();
     
     let url = 'http://localhost:8080/tweets';
     
+    //Brings in tweet text data//
     const text = $("#tweet-text").val();
-    console.log("the text is:", text);
 
-    //if text are is empty provide error msg
+    //If no text present//
     if (!text) {
-      return errorMessage('Cat got your tongue?')
-      //if tweet is too long provide error msg
-    } else if (text.length > 140) {
-        return errorMessage('Too much to say! Shorten it up!')
-    } else {
-      $.ajax({
-        url: url,
-        method: "POST",
-        data: $(this).serialize()
-      }).then((result) => {
-        console.log('result is', result);
-        return loadTweets();
-      }).catch(err => {
-        console.log('ajax error caught');
-        console.log(err);
-      });
+      return errorMessage('Cat got your tongue?');
     }
+
+    //If tweet is too long//
+    if (text.length > 140) {
+        return errorMessage('Too much to say! Shorten it up!')
+    }
+
+    //If tweet criteria passes, post tweet//
+    $.ajax({
+      url: url,
+      method: "POST",
+      data: $(this).serialize()
+    }).then((result) => {
+      console.log('result is', result);
+      return loadTweets();
+      }).catch(err => {
+      console.log('ajax error caught');
+      console.log(err);
+      });
     
   });
 
-  //Directs cursor from nav bar to textarea
+  //Directs cursor from nav bar to textarea//
   $('#write-new-tweet').on("click", function() {
     $('#tweet-text').focus();
   });
 
 });
 
+//Function to show error message and for how long//
 const errorMessage = function(message) {
   $(".error-msg").text(message);
   $(".error-msg").slideDown(function () {
@@ -54,7 +59,8 @@ const errorMessage = function(message) {
       $(".error-msg").slideUp()
     }, 3000)
   })
-}
+};
+
 
 const loadTweets = function() {
   $.ajax({
@@ -87,6 +93,7 @@ const createTweetElement = function(tweetData) {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
+
   let $tweet = $(`
   <article class="old-tweet">
   <header class="tweet-header">
@@ -113,9 +120,5 @@ const createTweetElement = function(tweetData) {
   </footer>
 </article>
   `);
-  // console.log("the $tweet is:", $tweet);
   return $tweet;
 };
-
-
-
