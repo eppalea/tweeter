@@ -36,3 +36,38 @@ body {
   background-color: #f4f1ec;
   flex-direction: column;
 }
+
+
+
+/* Mobile Styles*/
+@media only screen and (max-width: 767px) {
+  nav {
+    background-color: #d98900;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/*Tablet Styles*/
+@media only screen and (min-width: 768px){
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
+  }
+  .nav-header {
+    margin: 50px;
+  }
+}
+
+
+/*Desktop Styles*/
+@media only screen and (min-width: 1024px) {
+
+}
