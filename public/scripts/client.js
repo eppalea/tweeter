@@ -103,7 +103,7 @@ const createTweetElement = function(tweetData) {
     </div>
   <footer class="tweet-footer">
     <div class="time-stamp">
-      <span>${tweetData.created_at} days ago</span>
+      <span>${moment(tweetData.created_at).fromNow()}</span>
     </div>
     <div class="icons">
       <span class="flag-icon">🏳</span>
