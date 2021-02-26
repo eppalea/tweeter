@@ -4,11 +4,9 @@
   margin-top: 5%;
 }
 
-
 .old-tweet {
   border: 2px solid black;
   margin: 5%;
-  
 }
 
 .old-tweet:hover {
@@ -18,7 +16,6 @@
 .user {
   display: flex;
   justify-content: space-between; 
-  
 }
 
 .left {
@@ -29,13 +26,10 @@
   display: flex;
   width: 4rem;
   margin: 0.6em;
-  
 }
 
 .username {
   display: flex;
-  
-
 }
 
 .user-handle {
@@ -48,19 +42,15 @@
   visibility: visible;
 }
 
-
 .tweet-text {
   display: flex;
   margin: 20px;
   border-bottom: 2px solid black;
   padding-bottom: 40px;
-  /* border: 1px solid red; */
 }
 
 .label {
   margin: 2%;
-  /* border: none;
-  border-bottom: 2px solid black; */
 }
 
 .tweet-footer {
