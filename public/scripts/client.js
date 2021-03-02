@@ -14,8 +14,6 @@ $(document).ready(function() {
   $("form").on("submit", function(event) {
     event.preventDefault();
     
-    let url = 'http://localhost:8080/tweets';
-    
     //Brings in tweet text data//
     const text = $("#tweet-text").val();
 
@@ -31,15 +29,13 @@ $(document).ready(function() {
 
     //If tweet criteria passes, post tweet//
     $.ajax({
-      url: url,
+      url: '/tweets',
       method: "POST",
       data: $(this).serialize()
     }).then((result) => {
-      console.log('result is', result);
       return loadTweets();
     }).catch(err => {
-      console.log('ajax error caught');
-      console.log(err);
+      return err;
     });
     
   });
@@ -67,11 +63,9 @@ const loadTweets = function() {
     url: '/tweets',
     method: "GET"
   }).then((res) => {
-    console.log('result is', res);
     return renderTweets(res);
   }).catch(err => {
-    console.log('ajax error caught');
-    console.log(err);
+    return err;
   });
 };
 
