@@ -72,6 +72,7 @@ const loadTweets = function() {
 const renderTweets = function(tweets) {
   $('textarea').val('');
   $('.counter').text('140');
+  $('.history').empty();
   // loops through tweets
   for (let tweet of tweets) {
     // calls createTweetElement for each tweet
